@@ -5,7 +5,7 @@ class BaseDatos {
     protected $host = "127.0.0.1";
     protected $usuario = "root";
     protected $password = "";
-    protected $baseDatos = "matriculas";
+    protected $baseDatos = "matriculasv2";
     protected $conexion;
 
     /**

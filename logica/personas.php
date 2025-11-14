@@ -1,5 +1,5 @@
 <?php
-
+@session_start();
 
 // Paso 1: Leer el contenido del cuerpo de la solicitud HTTP
 $jsonEntrada = file_get_contents('php://input');
@@ -7,23 +7,24 @@ $jsonEntrada = file_get_contents('php://input');
 // Paso 2: Convertir el JSON recibido a un objeto PHP
 $objetoEntrada = json_decode($jsonEntrada);
 
-require_once '../estudiantes/Estudiantes.php';
-$estudiante = new Estudiantes();
+require_once '../clases/Personas.php';
+$login = new Login();
 
 
 switch ($objetoEntrada->accion) {
-    case 'consultar':
-        $informacion = $estudiante->consultarEstudiantes();
+    case 'consultarPersonas':
+        $informacion = $login->consultarPersonas();
         break;
-    case 'guardar':
-        $informacion = $estudiante->guardarEstudiante($objetoEntrada);
+    case 'modificarPersonas':
+        $informacion = $login->modificarPersonas($objetoEntrada);
         break;
-    case 'modificar':
-        $informacion = $estudiante->modificarEstudiante();
+    case 'crearPersonas':
+        $informacion = $login->crearPersonas($objetoEntrada);
         break;
     default:
         $informacion = ["error" => "Acción no válida o no enviada."];
         break;
+
 }
 
 // Convertir a JSON

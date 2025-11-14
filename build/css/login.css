@@ -1,116 +1,231 @@
-body{
-	margin:auto 0;
-}
-
-#listado_vinculaciones {	
-	background: #f1f1f1;
-	width: 100%;
-}
-
-#vinculacion {
-	border: 1px solid #ddd;
-}
-
-.ima_fon{
-	width:100%; 
-	padding-bottom:6px; 
-	margin-bottom:10px;
-	text-align: center;
-	border-bottom: 1px solid #c8ccce !important;
-}
-
-.titulo_cabeza{
-	color:#900; 
-	font-size:24px; 
-	margin-top:4px; 
-	text-align:center; 
-	font-weight:bold;
-}
-
-#div_ingresar {
-	text-align: center;
-	margin-top: 0px;
-}
-
-.letra_cabeza{
-	color:#666; 
-	font-size: 11px !important; 
-	text-align:center;
-	padding-top: 20px;
-}
-
-.letra_manual{
-	color:#666; 
-	font-size: 14px !important; 
-	text-align:center;
-}
-
-.cuerpo_login{
-	height:280px; 
-	padding-left:60px; 
-	padding-right:60px;
-}
-
-.cuerpo_login_vinculacion {
-	height:auto; 
-}
-
-.captcha{
-	width:100%; 
-	height:35px; 
-	margin-bottom:10px;
-}
-
-.div1_captcha{
-	width:180px; 
-	height:35px; 
-	float:left; 
-	padding-left:5px; 
-	color:#000;
-}
-
-.cajones{
-	width:35px; 
-	height:35px; 
-	border:solid 2px #999; 
-	border-left:0px; 
-	float:left; 
-	text-align:center; 
-	font-weight:bold; 
-	font-size:25px;
-}
-
-.div2_captcha{
-	width:100px; 
-	height:35px; 
-	float:left;
-}
-
-.button{
-	height:35px; 
-	margin-left:10px;
-}
-
-.version{
-	color:#666; 
-	font-size:16px; 
-	text-align:center; 
-	margin-bottom:-20px;
-}
-
-#content_modal{
-	margin-top:240px;
-}
-
-#header_modal{
-	background-color:#990000; 
-	color:#fff;
-}
-
-#lista{
-	color:#fff; 
-	background-color:#990000; 
-	cursor:pointer; 
-	padding:0px; 
-	padding-left:7px;
+body{
+
+	margin:auto 0;
+
+}
+
+
+
+#listado_vinculaciones {	
+
+	background: #f1f1f1;
+
+	width: 100%;
+
+}
+
+
+
+#vinculacion {
+
+	border: 1px solid #ddd;
+
+}
+
+
+
+.ima_fon{
+
+	width:100%; 
+
+	padding-bottom:6px; 
+
+	margin-bottom:10px;
+
+	text-align: center;
+
+	border-bottom: 1px solid #c8ccce !important;
+
+}
+
+
+
+.titulo_cabeza{
+
+	color:rgb(25, 0, 210); 
+
+	font-size:24px; 
+
+	margin-top:4px; 
+
+	text-align:center; 
+
+	font-weight:bold;
+
+}
+
+
+
+#div_ingresar {
+
+	text-align: center;
+
+	margin-top: 0px;
+
+}
+
+
+
+.letra_cabeza{
+
+	color:#666; 
+
+	font-size: 11px !important; 
+
+	text-align:center;
+
+	padding-top: 20px;
+
+}
+
+
+
+.letra_manual{
+
+	color:#666; 
+
+	font-size: 14px !important; 
+
+	text-align:center;
+
+}
+
+
+
+.cuerpo_login{
+
+	height:280px; 
+
+	padding-left:60px; 
+
+	padding-right:60px;
+
+}
+
+
+
+.cuerpo_login_vinculacion {
+
+	height:auto; 
+
+}
+
+
+
+.captcha{
+
+	width:100%; 
+
+	height:35px; 
+
+	margin-bottom:10px;
+
+}
+
+
+
+.div1_captcha{
+
+	width:180px; 
+
+	height:35px; 
+
+	float:left; 
+
+	padding-left:5px; 
+
+	color:#000;
+
+}
+
+
+
+.cajones{
+
+	width:35px; 
+
+	height:35px; 
+
+	border:solid 2px #999; 
+
+	border-left:0px; 
+
+	float:left; 
+
+	text-align:center; 
+
+	font-weight:bold; 
+
+	font-size:25px;
+
+}
+
+
+
+.div2_captcha{
+
+	width:100px; 
+
+	height:35px; 
+
+	float:left;
+
+}
+
+
+
+.button{
+
+	height:35px; 
+
+	margin-left:10px;
+
+}
+
+
+
+.version{
+
+	color:#666; 
+
+	font-size:16px; 
+
+	text-align:center; 
+
+	margin-bottom:-20px;
+
+}
+
+
+
+#content_modal{
+
+	margin-top:240px;
+
+}
+
+
+
+#header_modal{
+
+	background-color:#990000; 
+
+	color:#fff;
+
+}
+
+
+
+#lista{
+
+	color:#fff; 
+
+	background-color:#990000; 
+
+	cursor:pointer; 
+
+	padding:0px; 
+
+	padding-left:7px;
+
 }

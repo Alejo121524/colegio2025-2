@@ -1,5 +1,6 @@
 <?php 
 @session_start();
+$_SESSION = array();
 
 
 ?>
@@ -15,7 +16,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Administrar</title>
+        <title>Sistema Matrículas</title>
         <link rel="shortcut icon" href="../images/logo.jpg">
 
         <!-- PNotify -->
@@ -25,54 +26,17 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link href="vendors/bootstrap/dist/css/bootstrap.min.css " rel="stylesheet">
+        <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="build/css/form-elements.css">
         <link rel="stylesheet" href="build/css/style.css">
     	<link rel="stylesheet" href="build/css/login.css">
 
-        <script type="text/javascript">
-            function error(titulo, mensaje){
-                new PNotify({
-                    title: titulo,
-                    text: mensaje,
-                    type: 'error',
-                    hide: true,
-                    styling: 'bootstrap3'
-                });
+        <script src="js/libs/angular/angular.min.js"></script>
 
-            };
-
-            function ingresar(){
-                if(document.getElementById('username').value == "" || 
-                    document.getElementById('password').value == "")
-                    
-                {
-                    if(document.getElementById('username').value==""){
-                        document.getElementById('username').style.border = "2px solid #8F141B";
-                    }
-                    if(document.getElementById('password').value==""){
-                        document.getElementById('password').style.border = "2px solid #8F141B";
-                    }                    
-                    
-                }else{
-                    document.getElementById('username').style.border = "2px solid #ddd";
-                    document.getElementById('password').style.border = "2px solid #ddd";                  
-
-                    password = document.getElementById('password').value;
-                    username = document.getElementById('username').value;
-                    if(password == "1234" && username == "sara"){
-                        window.location.href = "panel.php";
-                    }
-                    else{
-                        error("Error de autenticación", "Usuario o contraseña incorrecta");
-                    }            
-                }       
-            }        
-        </script>
     </head>
 
-    <body > 
+    <body ng-app="sistemaMatriculas" ng-controller="indexController"> 
         <!-- Top content -->
         <div class="top-content">
         	
@@ -86,20 +50,20 @@
                                        
 										<br>
 
-										<div class="titulo_cabeza">ADMINISTRAR PÁGINA</div>                                        
+										<div class="titulo_cabeza">Sistema Matrículas</div>                                        
 									</div>
 									<div id="cuerpo" class="cuerpo_login">
                                         <div class="form-group"></div>
 										<div class="form-group">
-                                            <label class="sr-only" for="form-username">Username</label>
-                                            <input type="email" name="username" placeholder="E-mail" class="form-username form-control" id="username" >
+                                            <label class="sr-only" for="form-username">Correo</label>
+                                            <input type="text" placeholder="Correo" class="form-username form-control" ng-model="usuario" >
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" name="password" placeholder="Password" class="form-password form-control" id="password" >
+                                            <input type="password" placeholder="Contraseña" class="form-password form-control" ng-model="password" >
                                         </div>                                        
                                                                                 
                                         
-                                        <button type="button" id="serto" class="btn" onclick="ingresar()"><strong>INGRESAR</strong></button><br>
+                                        <button type="button" id="serto" class="btn" ng-click="validarDatosLogin()"><strong>INGRESAR</strong></button><br>
                                         
 
                                         
@@ -120,6 +84,8 @@
         <script src="vendors/jquery/dist/jquery-2.0.0.min.js"></script>
         <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="js/jquery.backstretch.min.js"></script>
+        <script src="index_component.js"></script>
+
         
         
     </body>
